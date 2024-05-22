@@ -8,7 +8,7 @@ const fitDressData = {
     slim:{
         formal:{},
         sprts:{},
-        casual:[{halfhand:}],
+        casual:[],
         trendy:{}
     },
     regular:{

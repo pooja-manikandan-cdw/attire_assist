@@ -1,5 +1,4 @@
 
-
 const sizeFitRecommendationService = (req, res) => {
 
     let BAI;
@@ -77,6 +76,18 @@ const typeFitRecommendationService = (req,res)=>{
     else if(req.body.type=="plusSize"){
 
     }
+}
+
+const base64toImage = (image) =>{
+    return new Promise((resolve,reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(image);
+        reader.onloadend = ()=>{
+            const baseURL = reader.result;
+            resolve(baseURL);
+        };
+        reader.onerror = reject;
+    })
 }
 
 module.exports = { sizeFitRecommendationService }
