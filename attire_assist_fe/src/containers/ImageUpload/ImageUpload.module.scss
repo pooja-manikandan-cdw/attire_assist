@@ -1,0 +1,75 @@
+.container {
+    width: 80%;
+    height: 700px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .positionContainer {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 100px;
+        display: flex;
+        justify-content: space-between;
+        width: 83%;
+    }
+    .poseContainer {
+        width: 400px;
+        height: 400px;
+        border: 2px solid;
+        display: flex;
+        
+        img {
+            width: 200px;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+    .detailsContainer {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: #c7bab18d;
+        gap: 5px;
+        // right: 13%;
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        p {
+            text-align: center;
+        }
+        h6 {
+            color: #386443;
+            text-decoration: underline;
+            margin: 0px auto;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button {
+            width: 50%;
+             margin: 20px auto;
+             padding: 15px 20px;
+             border: none;
+             border-radius: 10px;
+             font-size: 18px;
+             color: #fff;
+             background-color: #1d3322;
+             cursor: pointer;
+        }
+    }
+    .poseDescription {
+        margin-top: -5%;
+        margin-left: 17%;
+        font-size: 28px;
+        color: #435347;
+    }
+}
