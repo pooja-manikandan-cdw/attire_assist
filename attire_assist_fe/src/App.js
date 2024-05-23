@@ -7,8 +7,8 @@ import Attiretype from './containers/Attiretype/Attiretype';
 
 function App() {
   const [type, setType] = useState("image");
-  const [gender, setGender] = useState("");
-  const [page, setPage] = useState(1)
+  const [gender, setGender] = useState("man");
+  const [page, setPage] = useState(3)
   const handleNextClick = (num) => {
     setPage(num);
   }
@@ -20,7 +20,7 @@ function App() {
       {page===1?
       <Gender gender={gender} setGender={setGender} handleNextClick={handleNextClick}  />: 
       page===2? <Selection gender={gender} type={type} setType={setType} />:
-      page ===3? <Attiretype /> : <></>}
+      page ===3? <Attiretype gender={gender}/> : <></>}
       <div>
 
       </div>

@@ -72,28 +72,28 @@ import toverSizedShirt4 from './src/assets/attire-images/Trendy/Oversized shirt/
 
 const fitDressData = {
     slim:{
-        formal:[{fullSleeve:formalFullHand1},{formalPant:formalPant1}],
-        sprts:[{activeWearshorts:sportsShorts1},{sportsFullHand:sportsFullHand1},{sportsHalfHand:sportsHalfHand1},{sportsSleeveLess:sportSleeve1}],
-        casual:[{halfHand:casualHalfHand1},{causualPant:cpant1},{partyWear:cpartyWear1},{printed:cshirt1},{cshirt:causualFullHand1},{cshort:shorts1}],
-        trendy:[{baggyPant:tPant1},{trendyFullHand:tfullHand1},{trendyHalfHand:thalfHand1},{overSizedShirt:toverSizedShirt1}]
+        formal:[{dress:formalFullHand1,name:"fullSleeve"},{dress:formalPant1,name:"formalPant"}],
+        sprts:[{dress:sportsShorts1,name:"activeWearshorts"},{dress:sportsFullHand1,name:"sportsFullHand"},{dress:sportsHalfHand1,name:"sportsHalfHand"},{dress:sportSleeve1,name:"sportsSleeveLess"}],
+        casual:[{dress:casualHalfHand1,name:"halfHand"},{dress:cpant1,name:"causualPant"},{dress:cpartyWear1,name:"partyWear"},{dress:cshirt1,name:"printed"},{dress:causualFullHand1,name:"cshirt"},{dress:shorts1,name:"cshort"}],
+        trendy:[{dress:tPant1,name:"baggyPant"},{dress:tfullHand1,name:"trendyFullHand"},{dress:thalfHand1,name:"trendyHalfHand"},{dress:toverSizedShirt1,name:"overSizedShirt"}]
     },
     regular:{
-        formal:[{fullSleeve:formalFullHand2},{formalPant:formalPant2}],
-        sprts:[{activeWearshorts:sportsShorts2},{sportsFullHand:sportsFullHand2},{sportsHalfHand:sportsHalfHand2},{sportsSleeveLess:sportSleeve2}],
-        casual:[{halfHand:casualHalfHand2},{causualPant:cpant2},{partyWear:cpartyWear2},{printed:cshirt2},{cshirt:causualFullHand2},{cshort:shorts2}],
-        trendy:[{baggyPant:tPant2},{trendyFullHand:tfullHand2},{trendyHalfHand:thalfHand2},{overSizedShirt:toverSizedShirt2}]
+        formal:[{dress:formalFullHand2,name:"fullSleeve"},{dress:formalPant2,name:"formalPant"}],
+        sprts:[{dress:sportsShorts2,name:"activeWearshorts"},{dress:sportsFullHand2,name:"sportsFullHand"},{dress:sportsHalfHand2,name:"sportsHalfHand"},{dress:sportSleeve2,name:"sportsSleeveLess"}],
+        casual:[{dress:casualHalfHand2,name:"halfHand"},{dress:cpant2,name:"causualPant"},{dress:cpartyWear2,name:"partyWear"},{dress:cshirt2,name:"printed"},{dress:causualFullHand2,name:"cshirt"},{dress:shorts2,name:"cshort"}],
+        trendy:[{dress:tPant2,name:"baggyPant"},{dress:tfullHand2,name:"trendyFullHand"},{dress:thalfHand2,name:"trendyHalfHand"},{dress:toverSizedShirt2,name:"overSizedShirt"}]
     },
     muscular:{
-        formal:[{fullSleeve:formalFullHand3},{formalPant:formalPant3}],
-        sprts:[{activeWearshorts:sportsShorts3},{sportsFullHand:sportsFullHand3},{sportsHalfHand:sportsHalfHand3},{sportsSleeveLess:sportSleeve3}],
-        casual:[{halfHand:casualHalfHand3},{causualPant:cpant3},{partyWear:cpartyWear3},{printed:cshirt3},{cshirt:causualFullHand3},{cshort:shorts3}],
-        trendy:[{baggyPant:tPant3},{trendyFullHand:tfullHand3},{trendyHalfHand:thalfHand3},{overSizedShirt:toverSizedShirt3}]
+        formal:[{dress:formalFullHand3,name:"fullSleeve"},{dress:formalPant3,name:"formalPant"}],
+        sprts:[{dress:sportsShorts3,name:"activeWearshorts"},{dress:sportsFullHand3,name:"sportsFullHand"},{dress:sportsHalfHand3,name:"sportsHalfHand"},{dress:sportSleeve3,name:"sportsSleeveLess"}],
+        casual:[{dress:casualHalfHand3,name:"halfHand"},{dress:cpant3,name:"causualPant"},{dress:cpartyWear3,name:"partyWear"},{dress:cshirt3,name:"printed"},{dress:causualFullHand3,name:"cshirt"},{dress:shorts3,name:"cshort"}],
+        trendy:[{dress:tPant3,name:"baggyPant"},{dress:tfullHand3,name:"trendyFullHand"},{dress:thalfHand3,name:"trendyHalfHand"},{dress:toverSizedShirt3,name:"overSizedShirt"}]
     },
     plusSize:{
-        formal:[{fullSleeve:formalFullHand4},{formalPant:formalPant4}],
-        sprts:[{activeWearshorts:sportsShorts4},{sportsFullHand:sportsFullHand4},{sportsHalfHand:sportsHalfHand4},{sportsSleeveLess:sportSleeve4}],
-        casual:[{halfHand:casualHalfHand4},{causualPant:cpant4},{partyWear:cpartyWear4},{printed:cshirt4},{cshirt:causualFullHand4},{cshort:shorts4}],
-        trendy:[{baggyPant:tPant4},{trendyFullHand:tfullHand4},{trendyHalfHand:thalfHand4},{overSizedShirt:toverSizedShirt4}]
+        formal:[{dress:formalFullHand4,name:"fullSleeve"},{dress:formalPant4,name:"formalPant"}],
+        sprts:[{dress:sportsShorts4,name:"activeWearshorts"},{dress:sportsFullHand4,name:"sportsFullHand"},{dress:sportsHalfHand4,name:"sportsHalfHand"},{dress:sportSleeve4,name:"sportsSleeveLess"}],
+        casual:[{dress:casualHalfHand4,name:"halfHand"},{dress:cpant4,name:"causualPant"},{dress:cpartyWear4,name:"partyWear"},{dress:cshirt4,name:"printed"},{dress:causualFullHand4,name:"cshirt"},{dress:shorts4,name:"cshort"}],
+        trendy:[{dress:tPant4,name:"baggyPant"},{dress:tfullHand4,name:"trendyFullHand"},{dress:thalfHand4,name:"trendyHalfHand"},{dress:toverSizedShirt4,name:"overSizedShirt"}]
     }
 }
 
