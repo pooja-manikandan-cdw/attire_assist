@@ -1,41 +1,37 @@
 import React from 'react';
 import styles from "./Attiretype.module.scss";
-import dumImg from "../../assets/manWoBg.png";
 import Grid from '../../components/Grid/Grid';
-import muscularManImg from '../../assets/Body Type/men/Muscular man.png';
-import normalManImg from '../../assets/Body Type/men/Normal man.png';
-import plusSizeManImg from '../../assets/Body Type/men/Plus Sized man.png';
-import slimManImg from '../../assets/Body Type/men/Slim man.png';
-import muscularWomanImg from '../../assets/Body Type/women/Muscular woman.png';
-import normalWomanImg from '../../assets/Body Type/women/Normal woman.png';
-import plusSizeWomanImg from '../../assets/Body Type/women/Plus Sized woman.png';
-import slimWomanImg from '../../assets/Body Type/women/Slim Woman.png';
+import formalDressManImg from '../../assets/Attire Type (Men)/Formal-removebg-preview.png';
+import casualDressManImg from '../../assets/Attire Type (Men)/Casual-removebg-preview.png';
+import sportDressManImg from '../../assets/Attire Type (Men)/sport-removebg-preview.png';
+import trendyDressManImg from '../../assets/Attire Type (Men)/Trendy-removebg-preview.png';
+import formalDressWomanImg from '../../assets/Attire Type (Women)/formal-woman.png';
+import casualDressWomanImg from '../../assets/Attire Type (Women)/casual-woman.png';
+import sportDressWomanImg from '../../assets/Attire Type (Women)/sport-woman.png';
+import trendyDressWomanImg from '../../assets/Attire Type (Women)/trendy-woman.png';
 
 const Attiretype = (props) => {
 
-
-  const {gender,handleNextClick} = props;
+  const {gender,handleAttireClick} = props;
   const attireImages = {
     man:{
-      muscular:muscularManImg,
-      normal:normalManImg,
-      plusSize:plusSizeManImg,
-      slim:slimManImg
+      formal:formalDressManImg,
+      casual:casualDressManImg,
+      sport:sportDressManImg,
+      trendy:trendyDressManImg
     },
     woman:{
-      muscular:muscularWomanImg,
-      normal:normalWomanImg,
-      plusSize:plusSizeWomanImg,
-      slim:slimWomanImg
+      formal:formalDressWomanImg,
+      casual:casualDressWomanImg,
+      sport:sportDressWomanImg,
+      trendy:trendyDressWomanImg
     }
   }
 
-  
-
-  const bodyTypes = ["muscular","normal","plusSize","slim"];
+  const bodyTypes = ["formal","casual","sport","trendy"];
 
   const fitCards = bodyTypes.map((data)=>(
-    <Grid label={data} image={attireImages[gender][data]}/>
+    <Grid label={data} image={attireImages[gender][data]} onClick={handleAttireClick(data)}/>
   ));
 
   return (

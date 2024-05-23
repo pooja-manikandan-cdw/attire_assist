@@ -1,14 +1,21 @@
-import styles from './finalOutput.module.scss';
+import styles from "./finalOutput.module.scss";
+import getFitService from "../../service/fitImageService";
+import Grid from "../../components/Grid/Grid";
 
-const FinalOutput = (props)=>{
+const FinalOutput = (props) => {
+  const { attire, fit } = props;
 
-    const {gender,fit} = props;
+  const dressArray = getFitService(attire, fit);
 
-    
+  const dressCards = dressArray.map((data) => (
+    <Grid label={data.name} image={data.dress} />
+  ));
 
-    return(
-        <div>
+  return (
+    <div>
+      <div className={styles.dressContainer}>{dressCards}</div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
+export default FinalOutput;
