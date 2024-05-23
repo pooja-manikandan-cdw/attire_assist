@@ -29,6 +29,9 @@
             object-fit: cover;
         }
     }
+    .detailsContainer.paddingZero {
+        padding: 0;
+    }
     .detailsContainer {
         width: 400px;
         height: 400px;
@@ -36,13 +39,23 @@
         flex-direction: column;
         padding: 40px;
         background-color: #c7bab18d;
-        gap: 5px;
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
         // right: 13%;
-        img {
+        .uploadImage {
             width: 100px;
             height: 100px;
             margin: 20px auto;
         }
+        .file {
+            height: 85%;
+            width: 100%;
+            object-fit: fill;
+        }
+        
         p {
             text-align: center;
         }
@@ -53,10 +66,10 @@
             font-size: 16px;
             cursor: pointer;
         }
-        button {
+        .button {
             width: 50%;
              margin: 20px auto;
-             padding: 15px 20px;
+             padding: 7px 20px;
              border: none;
              border-radius: 10px;
              font-size: 18px;

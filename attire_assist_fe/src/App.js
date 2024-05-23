@@ -28,7 +28,7 @@ function App() {
       
       {page===1?
       <Gender gender={gender} setGender={setGender} handleNextClick={handleNextClick}  />: 
-      page===2? <Selection gender={gender} type={type} setType={setType} />:
+      page===2? <Selection gender={gender} type={type} setType={setType} handleNextClick={handleNextClick} />:
       page ===3? <Attiretype gender={gender} handleAttireClick={handleAttireSelect}/> :
       page===4? <FinalOutput attire={attire} fit={attire}/> : <></>}
       <div>
