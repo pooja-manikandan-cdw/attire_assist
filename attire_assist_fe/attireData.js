@@ -23,7 +23,6 @@ import cshirt4 from './src/assets/attire-images/Causual/Printed/r5uwo_512.webp';
 import causualFullHand4 from './src/assets/attire-images/Causual/Shirt/casual.jpeg';
 import shorts4 from './src/assets/attire-images/Causual/Shorts/shorts4.webp'
 
-
 import casualHalfHand2 from './src/assets/attire-images/Causual/HalfHand/2.jpg';
 import casualHalfHand3 from './src/assets/attire-images/Causual/HalfHand/3.webp';
 import casualHalfHand4 from './src/assets/attire-images/Causual/HalfHand/4.webp';

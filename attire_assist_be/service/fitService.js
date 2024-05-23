@@ -3,24 +3,19 @@ const sizeFitRecommendationService = (req, res) => {
 
     let BAI;
     let fitResponse;
-
     if (req.body.gender == "male") {
-
         BAI = (req.body.hip / Math.pow(req.body.height, 1.5)) - 18;
-
         if (BAI < 21) {
             fitResponse = {
                 fit: "Slim fit"
             }
         }
-
-        else if(req.body.chest > req.body.waist && req.body.chest > req.body.hip && req.body.hip > req.body.waist) {
+        else if (req.body.chest > req.body.waist && req.body.chest > req.body.hip && req.body.hip > req.body.waist) {
             fitResponse = {
                 fit: "Muscular fit"
             }
         }
-
-        else if(BAI <= 33 && BAI > 21) {
+        else if (BAI <= 33 && BAI > 21) {
             if (req.body.chest >= req.body.waist) {
                 fitResponse = {
                     fit: "Normal fit"
@@ -32,7 +27,6 @@ const sizeFitRecommendationService = (req, res) => {
                 }
             }
         }
-
         else if (BAI > 33) {
             fitResponse = {
                 fit: "Plus size fit"
@@ -62,27 +56,15 @@ const sizeFitRecommendationService = (req, res) => {
     return fitResponse;
 }
 
-const typeFitRecommendationService = (req,res)=>{
-    let fitResponse;
-    if(req.body.type=="slim"){
-
-    }
-    else if(req.body.type=="normal"){
-
-    }
-    else if(req.body.type=="athlete"){
-
-    }
-    else if(req.body.type=="plusSize"){
-
-    }
+const imageToFitRecommendationService = ()=>{
+    
 }
 
-const base64toImage = (image) =>{
-    return new Promise((resolve,reject) => {
+const base64toImage = (image) => {
+    return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(image);
-        reader.onloadend = ()=>{
+        reader.onloadend = () => {
             const baseURL = reader.result;
             resolve(baseURL);
         };
