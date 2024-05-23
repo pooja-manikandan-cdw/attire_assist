@@ -7,7 +7,7 @@ import Label from '../../components/Label/Label';
 import { getSizeFitService } from '../../service/getSizeFitService';
 
 const Bodysize = (props) => {
-    const { gender, setType, setFit } = props;
+    const { gender, setType, setBodyType, setPage } = props;
     const [height, setHeight] = useState({value:0, unit:"cm"})
     const [hip, setHip] = useState({value:0, unit:"cm"})
     const [chest, setChest] = useState({value:0, unit:"cm"})
@@ -33,26 +33,27 @@ const Bodysize = (props) => {
         return meter;
     }
 
-    const calculate = () => {
+    const calculate = async() => {
         var requestBody;
         if(gender==='man') {
             requestBody = {
                 gender: gender,
-                height: height,
-                waist: waist,
-                hip: hip,
-                chest: chest
+                height: height.value,
+                waist: waist.value,
+                hip: hip.value,
+                chest: chest.value
             }
         } else if(gender==='woman') {
             requestBody = {
                 gender: gender,
-                waist: waist,
-                hip: hip,
-                bust: bust
+                waist: waist.value,
+                hip: hip.value,
+                bust: bust.value
             }
         }
-        const result = getSizeFitService(requestBody)
-        setFit(result);
+        const result = await getSizeFitService(requestBody)
+        setBodyType(result.fit);
+        setPage(3);
     }
 
     return (

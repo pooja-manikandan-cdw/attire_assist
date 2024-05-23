@@ -5,10 +5,11 @@ import uploadLogo from '../../assets/uploadLogo.png'
 import man from '../../assets/manWoBg.png'
 import woman from '../../assets/womanWoBg.png';
 import {useDropzone} from 'react-dropzone';
+import { getImageFitService } from '../../service/getImageFitService';
 
 const ImageUpload = (props) => {
 
-    const {setType} = props;
+    const {setType, setBodyType} = props;
     const [imageFile, setImageFile] = useState("");
     const [file, setFile] = useState();
     const [baseURL, setBaseURL] = useState("");
@@ -18,7 +19,7 @@ const ImageUpload = (props) => {
         var data = acceptedFiles.map(file => {
           setFile(file);
           return Object.assign(file, {
-          preview: URL.createObjectURL(file)
+          preview: new URL.createObjectURL(file)
         })})
         setImageFile(data[0].preview);
         imageUploaded();
@@ -29,7 +30,7 @@ const ImageUpload = (props) => {
         
     }
     const handleFileUpload = (e) => {
-      setImageFile(URL.createObjectURL(e.target.files[0]));
+      setImageFile(new URL.createObjectURL(e.target.files[0]));
       imageUploaded();
     }
     function imageUploaded() {
@@ -37,14 +38,16 @@ const ImageUpload = (props) => {
       var base64String;
 
       reader.onload = function () {
-          base64String = reader.result.replace("data:", "")
+          base64String = new reader.result.replace("data:", "")
               .replace(/^.+,/, "");
+            console.log(base64String)
           setBaseURL(base64String);
       }
       reader.readAsDataURL(file);
   }
-  function calculate() {
-    
+  async function calculate() {
+    const data = await getImageFitService(baseURL);
+    setBodyType(data.fit)
   }
   useEffect(()=>{
     file && imageUploaded();
@@ -78,6 +81,12 @@ const ImageUpload = (props) => {
         </div>
         <p className={styles.poseDescription}>Strike this pose</p>
         <button className={styles.nextButton} onClick={calculate}>Next</button>
+      </div>
+      <div className={styles.rulesWrapper}>
+        <p>Distance: Position the camera 6 to 7 feet (approximately 2 to 3 meters) away from the subject.</p>
+        <p>Format: The image can be in any file format.</p>
+        <p>File Size: Ensure the file size is less than 5 MB</p>
+
       </div>
     </>
   )

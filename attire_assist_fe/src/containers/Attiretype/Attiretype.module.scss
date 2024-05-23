@@ -1,9 +1,28 @@
 .container{
-    width: 50%;
-    margin: auto;
-    margin-top: 2rem;
-    row-gap: 3rem;
+    width: 80%;
+    height: 750px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #dad0c7;
     display: flex;
+    justify-content: center;
+    gap: 5% 19%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.nextButton {
+    width: 10%;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1d3322;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    right: 13%;
 }

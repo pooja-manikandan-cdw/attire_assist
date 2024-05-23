@@ -13,41 +13,27 @@ function App() {
   const [gender, setGender] = useState("man");
   const [dressType,setDressType] = useState('');
   const [page, setPage] = useState(1);
-  const [attire,setAttire] = useState('');
-  const [fit, setFit] = useState("");
+  // const [attire,setAttire] = useState('');
 
   const handleNextClick = (num) => {
     setPage(num);
   }
 
   const handleAttireSelect = (attireType)=>{
+    console.log('attireType', attireType)
     setDressType(attireType);
   }
 
-  const getResults = () => {
-    switch(type) {
-      case 'image':
-        // call image services
-        getSizeFitService()
-        break;
-      case 'size':
-      case 'type':
-        // call size type services
-        break;
 
-      default: break;
-    }
-  }
-
-  console.log('page', page)
+  console.log('dressType', dressType, bodyType)
   return (
     <div className="App">
       <Header />      
       
       {page===1?
       <Gender gender={gender} setGender={setGender} handleNextClick={handleNextClick}  />: 
-      page===2? <Selection gender={gender} setBodyType={setBodyType} type={type} setType={setType} handleNextClick={handleNextClick} />:
-      page ===3? <Attiretype gender={gender} handleAttireClick={handleAttireSelect} handleNextPage={handleNextClick}/> :
+      page===2? <Selection gender={gender} setBodyType={setBodyType} type={type} setType={setType} handleNextClick={handleNextClick} setPage={setPage} />:
+      page ===3? <Attiretype dressType={dressType} gender={gender} handleAttireClick={handleAttireSelect} handleNextPage={handleNextClick}/> :
       page===4? <FinalOutput attire={dressType} fit={bodyType}/> : <></>}
       <div>
 

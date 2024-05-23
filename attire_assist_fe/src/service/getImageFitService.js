@@ -2,12 +2,13 @@ import Axios from 'axios';
 
 export const getImageFitService = async(baseUrl) => {
     var requestBody = {
-        image: baseUrl
+        url: baseUrl
     }
 
-    const response = await Axios.get({
+    const response = await Axios.request({
         url: "http://localhost:3000/glam/fitForImage",
         data: requestBody,
+        method: "POST"
     })
 
     return response.data;

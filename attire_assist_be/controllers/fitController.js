@@ -2,7 +2,6 @@ const {returnResponse} = require('../constant/responseConstant');
 const {sizeFitRecommendationService,imageToFitRecommendationService} = require('../service/fitService');
 
 const fitRecommendationWithSize = async(req,res)=>{
-
     let responseData;
     try{
         let fitData = await sizeFitRecommendationService(req,res);

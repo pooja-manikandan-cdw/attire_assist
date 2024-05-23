@@ -1,8 +1,41 @@
-.dressContainer{
+.wrapper {
     width: 80%;
-    margin: auto;
-    margin-top: 3rem;
+    height: 800px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #dad0c7;
+    display: flex;
+    justify-content: center;
+    gap: 5% 19%;
+    flex-wrap: wrap;
+    // padding: 50px 0;
+}
+
+.dressContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px 30px;
+    margin: 20px 30px;
+}
+
+.amazonButton, .flipkartButton {
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    font-weight: 600;
+}
+.buttonWrapper {
+    margin: 0 auto;
+}
+.amazonButton {
+    background: #FF9900;
+}
+
+.flipkartButton {
+    background: #2A55E5;
+    color: #fff;
 }

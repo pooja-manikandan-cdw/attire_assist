@@ -6,14 +6,26 @@ const FinalOutput = (props) => {
   const { attire, fit } = props;
   const dressArray = getFitService(attire.toLowerCase(), fit.toLowerCase());
 
+
+  console.log('dressArray', attire, fit, dressArray)
   const dressCards = dressArray.map((data) => (
-    <Grid label={data.name} image={data.dress} />
+    <div>
+      <Grid label={data.name} image={data.dress} />
+      <div className={styles.buttonWrapper}>
+          <a href={data.amazon} target="_blank" rel="noopener"><button className={styles.amazonButton}>Amazon</button></a>
+          <button className={styles.flipkartButton}>Flipkart</button>
+        </div>
+    </div>
   ));
 
   return (
-    <div>
-      <div className={styles.dressContainer}>{dressCards}</div>
-    </div>
+    <>
+      <div className={styles.wrapper}>
+        <div className={styles.dressContainer}>{dressCards}</div>
+
+      </div>
+        
+    </>
   );
 };
 
