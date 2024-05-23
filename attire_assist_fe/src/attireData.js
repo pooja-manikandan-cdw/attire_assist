@@ -1,23 +1,23 @@
 import casualHalfHand1 from './assets/attire-images/Causual/HalfHand/1.webp';
 import cpant1 from './assets/attire-images/Causual/Pant/Causal Pant 1.jpeg';
-import cpartyWear1 from './assets/attire-images/Causual/Party Wear/ajiq0_512.webp'
+import cpartyWear1 from './assets/attire-images/Causual/PartyWear/ajiq0_512.webp'
 import cshirt1 from './assets/attire-images/Causual/Printed/6fxss_512.webp';
 import causualFullHand1 from './assets/attire-images/Causual/Shirt/6.jpeg';
 import shorts1 from './assets/attire-images/Causual/Shorts/shorts1.webp';
 
 import cpant2 from './assets/attire-images/Causual/Pant/Causal Pant 2.jpeg';
-import cpartyWear2 from './assets/attire-images/Causual/Party Wear/dwmum_512.webp'
+import cpartyWear2 from './assets/attire-images/Causual/PartyWear/dwmum_512.webp'
 import cshirt2 from './assets/attire-images/Causual/Printed/euayj_512.webp';
 import causualFullHand2 from './assets/attire-images/Causual/Shirt/7.webp';
-import shorts2 from './assets/attire-images/Causual/Shorts/shorts2.webp';
+import shorts2 from './assets/attire-images/Causual/Shorts/shorts2.jpg';
 
 import cpant3 from './assets/attire-images/Causual/Pant/Causal Pant 3.jpeg';
 import cpartyWear3 from './assets/attire-images/Causual/PartyWear/jgjvt_512.webp';
 import cshirt3 from './assets/attire-images/Causual/Printed/l9r2e_512.webp';
 import causualFullHand3 from './assets/attire-images/Causual/Shirt/8.jpeg';
-import shorts3 from './assets/attire-images/Causual/Shorts/shorts3.webp'
+import shorts3 from './assets/attire-images/Causual/Shorts/shorts3.jpg'
 
-import cpant4 from './assets/attire-images/Causual/Pant/Causal Pan 4.jpeg';
+import cpant4 from './assets/attire-images/Causual/Pant/Causal Pant 4.jpeg';
 import cpartyWear4 from './assets/attire-images/Causual/PartyWear/kuk2q_512.webp';
 import cshirt4 from './assets/attire-images/Causual/Printed/r5uwo_512.webp';
 import causualFullHand4 from './assets/attire-images/Causual/Shirt/casual.jpeg';
@@ -31,25 +31,26 @@ import formalFullHand2 from './assets/attire-images/Formal/FullSleeve/7nxmy_400.
 import formalPant1 from './assets/attire-images/Formal/Pant/formal 3.jpeg';
 import formalPant2 from './assets/attire-images/Formal/Pant/formal 8.jpeg';
 import formalFullHand3 from './assets/attire-images/Formal/FullSleeve/8hcbk_400.webp';
-import formalPant3 from './assets/attire-images/Formal/Pant/Formal Pant 1.jpeg';
+import formalPant3 from './assets/attire-images/Formal/Pant/Formal Pant 1.jpg';
 import formalFullHand4 from './assets/attire-images/Formal/FullSleeve/89fnh_400.webp';
-import formalPant4 from './assets/attire-images/Formal/Pant/Formal Pant 2.jpeg';
-import sportsShorts1 from './assets/attire-images/Sports/activeWearshorts/shorts1.jpeg';
-import sportsFullHand1 from './assets/attire-images/Sports/activeWearshorts/cm2ea_400.webp';
+import formalPant4 from './assets/attire-images/Formal/Pant/Formal Pant 2.webp';
+import sportsShorts1 from './assets/attire-images/Sports/ActiveWearshorts/shorts1.jpeg';
+
+import sportsFullHand1 from './assets/attire-images/Sports/FullHand/cm2ea_400.webp';
 import sportsHalfHand1 from './assets/attire-images/Sports/halfhand/7pidy_400.webp';
-import sportSleeve1 from './assets/attire-images/Sports/sleeveLess/6z4md_400.webp';
-import sportsShorts2 from './assets/attire-images/Sports/activeWearshorts/shorts2.jpeg';
-import sportsFullHand2 from './assets/attire-images/Sports/activeWearshorts/dixvb_400.webp';
+import sportSleeve1 from './assets/attire-images/Sports/Sleeveless/6z4md_400.webp';
+import sportsShorts2 from './assets/attire-images/Sports/ActiveWearshorts/shorts2.jpeg';
+import sportsFullHand2 from './assets/attire-images/Sports/FullHand/dixvb_400.webp';
 import sportsHalfHand2 from './assets/attire-images/Sports/halfhand/1886u_400.webp';
-import sportSleeve2 from './assets/attire-images/Sports/sleeveLess/cgiky_400.webp';
-import sportsShorts3 from './assets/attire-images/Sports/activeWearshorts/shorts3.jpeg';
-import sportsFullHand3 from './assets/attire-images/Sports/activeWearshorts/ecjgj_400.webp';
+import sportSleeve2 from './assets/attire-images/Sports/Sleeveless/cgiky_400.webp';
+import sportsShorts3 from './assets/attire-images/Sports/ActiveWearshorts/shorts3.jpeg';
+import sportsFullHand3 from './assets/attire-images/Sports/FullHand/ecjgj_400.webp';
 import sportsHalfHand3 from './assets/attire-images/Sports/halfhand/41890_400.webp';
-import sportSleeve3 from './assets/attire-images/Sports/sleeveLess/h1jlq_400.webp';
-import sportsShorts4 from './assets/attire-images/Sports/activeWearshorts/shorts4.jpeg';
-import sportsFullHand4 from './assets/attire-images/Sports/activeWearshorts/upnu2_400.webp';
+import sportSleeve3 from './assets/attire-images/Sports/Sleeveless/h1jlq_400.webp';
+import sportsShorts4 from './assets/attire-images/Sports/ActiveWearshorts/shorts4.jpeg';
+import sportsFullHand4 from './assets/attire-images/Sports/FullHand/upnu2_400.webp';
 import sportsHalfHand4 from './assets/attire-images/Sports/halfhand/dfkl8_400.webp';
-import sportSleeve4 from './assets/attire-images/Sports/sleeveLess/jpckb_400.webp';
+import sportSleeve4 from './assets/attire-images/Sports/Sleeveless/jpckb_400.webp';
 import tPant1 from './assets/attire-images/Trendy/BaggyPant/baggy 1.jpeg';
 import tfullHand1 from './assets/attire-images/Trendy/FullHand/6hzzs_512.webp';
 import thalfHand1 from './assets/attire-images/Trendy/HalfHand/4dzla_512.webp';
@@ -65,7 +66,7 @@ import tfullHand3 from './assets/attire-images/Trendy/FullHand/auag2_512.webp';
 import thalfHand3 from './assets/attire-images/Trendy/HalfHand/22llo_512.webp';
 import toverSizedShirt3 from './assets/attire-images/Trendy/Oversized shirt/oversized 5.jpeg';
 
-import tPant4 from './assets/attire-images/Trendy/BaggyPant/baggy 4.jpeg';
+import tPant4 from './assets/attire-images/Trendy/BaggyPant/baggy 5.jpeg';
 import tfullHand4 from './assets/attire-images/Trendy/FullHand/by4jo_400.webp';
 import thalfHand4 from './assets/attire-images/Trendy/HalfHand/c6zzw_512.webp';
 import toverSizedShirt4 from './assets/attire-images/Trendy/Oversized shirt/oversized 6.jpeg';
