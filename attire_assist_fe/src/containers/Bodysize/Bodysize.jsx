@@ -4,9 +4,10 @@ import styles from './Bodysize.module.scss';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import measurement from '../../assets/measurement.png'
 import Label from '../../components/Label/Label';
+import { getSizeFitService } from '../../service/getSizeFitService';
 
 const Bodysize = (props) => {
-    const { gender, setType } = props;
+    const { gender, setType, setFit } = props;
     const [height, setHeight] = useState({value:0, unit:"cm"})
     const [hip, setHip] = useState({value:0, unit:"cm"})
     const [chest, setChest] = useState({value:0, unit:"cm"})
@@ -30,6 +31,28 @@ const Bodysize = (props) => {
             default: break;
         }
         return meter;
+    }
+
+    const calculate = () => {
+        var requestBody;
+        if(gender==='man') {
+            requestBody = {
+                gender: gender,
+                height: height,
+                waist: waist,
+                hip: hip,
+                chest: chest
+            }
+        } else if(gender==='woman') {
+            requestBody = {
+                gender: gender,
+                waist: waist,
+                hip: hip,
+                bust: bust
+            }
+        }
+        const result = getSizeFitService(requestBody)
+        setFit(result);
     }
 
     return (
@@ -78,7 +101,7 @@ const Bodysize = (props) => {
 
                 </div>
             </div>
-            <button>Proceed</button>
+            <button onClick={calculate}>Proceed</button>
         </div>
     </div>
   )

@@ -43,6 +43,9 @@ const ImageUpload = (props) => {
       }
       reader.readAsDataURL(file);
   }
+  function calculate() {
+    
+  }
   useEffect(()=>{
     file && imageUploaded();
   }, [file])
@@ -74,7 +77,7 @@ const ImageUpload = (props) => {
             </div>
         </div>
         <p className={styles.poseDescription}>Strike this pose</p>
-
+        <button className={styles.nextButton} onClick={calculate}>Next</button>
       </div>
     </>
   )
