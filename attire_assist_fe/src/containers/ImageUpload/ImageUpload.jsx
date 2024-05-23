@@ -11,10 +11,13 @@ const ImageUpload = (props) => {
     const uploadImageHandler = () => {
         console.log('image')
     }
-    const handleLinkClick = () => {
+    const handleLinkClick = (type) => {
         console.log('clcik')
+        setType(type)
     }
   return (
+    <>
+    <h1 className={styles.imageUploadTitle}>YOUR IMAGE CAN UNLEASH YOUR BEST ATTIRE</h1>
     <div className={styles.container}>
 
         <img src={background} alt='background' />
@@ -29,13 +32,14 @@ const ImageUpload = (props) => {
                 <p>Drag and drop your image here</p>
                 <p>or</p>
                 <button onClick={uploadImageHandler}>Upload Image</button>
-                <h6 onClick={handleLinkClick}>Use my Body Size instead</h6>
-                <h6 onClick={handleLinkClick}>Use my Body Type instead</h6>
+                <h6 onClick={() => handleLinkClick('size')}>Use my Body Size instead</h6>
+                <h6 onClick={() => handleLinkClick('type')}>Use my Body Type instead</h6>
             </div>
         </div>
         <p className={styles.poseDescription}>Strike this pose</p>
 
       </div>
+    </>
   )
 }
 
