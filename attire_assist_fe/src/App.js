@@ -1,21 +1,26 @@
 import './App.css';
 import Header from './components/Header/Header';
-import Label from './components/Label/Label';
-import background from './assets/background-1.jpg'
-import ImageUpload from './containers/ImageUpload/ImageUpload';
 import { useState } from 'react';
+import Gender from './containers/Gender/Gender';
+import Selection from './containers/Selection/Selection';
+import Attiretype from './containers/Attiretype/Attiretype';
 
 function App() {
   const [type, setType] = useState("image");
+  const [gender, setGender] = useState("");
+  const [page, setPage] = useState(1)
+  const handleNextClick = (num) => {
+    setPage(num);
+  }
+  console.log('page', page)
   return (
     <div className="App">
-      <Header />
-      <h1>YOUR IMAGE CAN UNLEASH YOUR BEST ATTIRE</h1>
-      {/* <Label label="Add your body measurements" /> */}
-      {/* <div className='background'></div> */}
-      {type === 'image' ? <ImageUpload setType={setType} /> : null}
-      {type === 'size' ? <ImageUpload setType={setType} /> : null}
-      {type === 'type' ? <ImageUpload setType={setType} /> : null}
+      <Header />      
+      
+      {page===1?
+      <Gender gender={gender} setGender={setGender} handleNextClick={handleNextClick}  />: 
+      page===2? <Selection gender={gender} type={type} setType={setType} />:
+      page ===3? <Attiretype /> : <></>}
       <div>
 
       </div>

@@ -21,7 +21,6 @@
     .poseContainer {
         width: 400px;
         height: 400px;
-        border: 2px solid;
         display: flex;
         
         img {
@@ -72,4 +71,10 @@
         font-size: 28px;
         color: #435347;
     }
+}
+
+.imageUploadTitle {
+    text-align: center;
+    color: #17281b;
+    margin: 35px 0;
 }

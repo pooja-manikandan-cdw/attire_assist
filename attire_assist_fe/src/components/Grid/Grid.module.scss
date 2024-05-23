@@ -1,0 +1,29 @@
+.grid {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    cursor: pointer;
+    .left {
+        width: 70%;
+        background-color: #637b67;
+        border-radius: 10px;
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 30%;
+        background-color: #a2ae9f;
+        color: #637b67;
+        border-radius: 0 10px 10px 0;
+        margin-left: -10px;
+        p {
+            transform: rotate(-90deg) translate(-50%, 10%);
+            margin-top: 81%;
+            font-size: 45px;
+        }
+    }
+}
+.active {
+    transform: scale(1.2, 1.2);
+}
