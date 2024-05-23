@@ -4,7 +4,7 @@ import Label from '../../components/Label/Label';
 import Grid from '../../components/Grid/Grid'
 
 const Bodytype = (props) => {
-    const { gender, handleNextClick } = props;
+    const { gender, handleNextClick,setType,setBodyType } = props;
     const [genderKey, setGenderKey] = useState("")
     const [selectedType, setSelectedType] = useState("");
 
@@ -31,8 +31,9 @@ const Bodytype = (props) => {
         },
     ]
 
-    const handleTypeClick = (selectedTypeClicked) => {
-        setSelectedType(selectedTypeClicked)
+    const handleTypeClick = (selectedTypeClicked,selectedType) => {
+        setBodyType(selectedType);
+        setSelectedType(selectedTypeClicked);
     }
 
     useEffect(() => {
@@ -44,7 +45,7 @@ const Bodytype = (props) => {
         <h1 className={styles.bodyTypeTitle}>Select your body type</h1>
         <div className={styles.container}>
             {maleBodyType.map((data) => (
-                <Grid onClick={() => handleTypeClick(data.id)} active={selectedType===data.id} label={data.label} image={`${data.image}${genderKey}.png`} />
+                <Grid onClick={() => handleTypeClick(data.id,data.label)} active={selectedType===data.id} label={data.label} image={`${data.image}${genderKey}.png`} />
             ))}
         </div>
             <button onClick={() => handleNextClick(3)} className={styles.nextButton}>

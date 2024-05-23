@@ -12,7 +12,7 @@ import trendyDressWomanImg from '../../assets/Attire Type (Women)/trendy-woman.p
 
 const Attiretype = (props) => {
 
-  const {gender,handleAttireClick} = props;
+  const {gender,handleAttireClick,handleNextPage} = props;
   const attireImages = {
     man:{
       formal:formalDressManImg,
@@ -31,7 +31,7 @@ const Attiretype = (props) => {
   const bodyTypes = ["formal","casual","sport","trendy"];
 
   const fitCards = bodyTypes.map((data)=>(
-    <Grid label={data} image={attireImages[gender][data]} onClick={handleAttireClick(data)}/>
+    <Grid label={data} image={attireImages[gender][data]} onClick={() =>handleAttireClick(data)}/>
   ));
 
   return (
@@ -39,6 +39,9 @@ const Attiretype = (props) => {
         <div className={styles.container}>
           {fitCards}
         </div>
+        <button onClick={()=> handleNextPage(4)}>
+          Proceed
+        </button>
     </div>
   )
 }

@@ -1,4 +1,3 @@
-
 const sizeFitRecommendationService = (req, res) => {
 
     let BAI;
@@ -72,4 +71,4 @@ const base64toImage = (image) => {
     })
 }
 
-module.exports = { sizeFitRecommendationService }
+module.exports = { sizeFitRecommendationService,imageToFitRecommendationService }

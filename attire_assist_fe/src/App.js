@@ -7,18 +7,18 @@ import Attiretype from './containers/Attiretype/Attiretype';
 import FinalOutput from './containers/final-output/finalOutput';
 
 function App() {
-  const [type, setType] = useState("image");
+  const [type,setType] = useState("image");
+  const [bodyType, setBodyType] = useState("");
   const [gender, setGender] = useState("man");
-  const [attire,setAttire] = useState('');
-  const [page, setPage] = useState(3);
+  const [dressType,setDressType] = useState('');
+  const [page, setPage] = useState(1);
 
   const handleNextClick = (num) => {
     setPage(num);
   }
 
   const handleAttireSelect = (attireType)=>{
-    setPage(4);
-    setAttire(attireType);
+    setDressType(attireType);
   }
 
   console.log('page', page)
@@ -28,9 +28,9 @@ function App() {
       
       {page===1?
       <Gender gender={gender} setGender={setGender} handleNextClick={handleNextClick}  />: 
-      page===2? <Selection gender={gender} type={type} setType={setType} handleNextClick={handleNextClick} />:
-      page ===3? <Attiretype gender={gender} handleAttireClick={handleAttireSelect}/> :
-      page===4? <FinalOutput attire={attire} fit={attire}/> : <></>}
+      page===2? <Selection gender={gender} setBodyType={setBodyType} type={type} setType={setType} handleNextClick={handleNextClick} />:
+      page ===3? <Attiretype gender={gender} handleAttireClick={handleAttireSelect} handleNextPage={handleNextClick}/> :
+      page===4? <FinalOutput attire={dressType} fit={bodyType}/> : <></>}
       <div>
 
       </div>
