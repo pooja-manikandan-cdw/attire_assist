@@ -18,7 +18,7 @@ const ImageUpload = (props) => {
       onDrop: acceptedFiles => {
         var data = acceptedFiles.map(file => {
           setFile(file);
-          return Object.assign(file, {
+          return new Object.assign(file, {
           preview: new URL.createObjectURL(file)
         })})
         setImageFile(data[0].preview);
@@ -40,7 +40,6 @@ const ImageUpload = (props) => {
       reader.onload = function () {
           base64String = new reader.result.replace("data:", "")
               .replace(/^.+,/, "");
-            console.log(base64String)
           setBaseURL(base64String);
       }
       reader.readAsDataURL(file);
@@ -86,7 +85,6 @@ const ImageUpload = (props) => {
         <p>Distance: Position the camera 6 to 7 feet (approximately 2 to 3 meters) away from the subject.</p>
         <p>Format: The image can be in any file format.</p>
         <p>File Size: Ensure the file size is less than 5 MB</p>
-
       </div>
     </>
   )

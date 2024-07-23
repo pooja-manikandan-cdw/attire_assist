@@ -20,12 +20,10 @@ function App() {
   }
 
   const handleAttireSelect = (attireType)=>{
-    console.log('attireType', attireType)
     setDressType(attireType);
   }
 
 
-  console.log('dressType', dressType, bodyType)
   return (
     <div className="App">
       <Header />      
